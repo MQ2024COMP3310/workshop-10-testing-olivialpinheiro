@@ -56,32 +56,4 @@ You can now browse to the url http://localhost:8001/ and you should see the home
 
 ![Welcome page](WelcomePage.jpg)
 
-Task 1
 
-The branch is main.py 
-
-The command to find out which branches are in the repository is 
-
-Git branch –list 
-
-Task 2 
-
-Issue was it couldn’t fetch the content from remote repositories 
-
-Used git pull to fetch the content 
-
-Task 3 
-
-To create branches, write: 
-
-Git branch <branch name> 
-
-To determine the working branch use: 
-
-Git checkout <branch name> 
-
-Task 4 
-
-
-
-- dev change update 
