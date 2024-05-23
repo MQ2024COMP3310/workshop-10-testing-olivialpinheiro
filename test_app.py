@@ -78,9 +78,19 @@ class TestWebApp(unittest.TestCase):
             'password' : 'test123'
         }, follow_redirects = True)
         assert response.status_code == 200 
+        assert response.request.path == '/login'
+
+    # The code is causing error by attempting to drop the user table in the database. if successful this would result in the deletion of the entire user table. 
+    # This violated the security principle of input validation and sanitisation. 
 
     def test_xss_vulnerability(self):
         # TODO: Can we store javascript tags in the username field?
+         response = self.client.post('/profile', data ={ 
+             'email' : 'user@test.com', 
+             'name' : 'test}} <script> document.write("Hello, World!); </script>', 
+             'password' : 'test123'
+         })
+         
         assert False
 
 
